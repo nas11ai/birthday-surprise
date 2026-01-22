@@ -1,3 +1,4 @@
+<!-- src/App.vue -->
 <script setup lang="ts">
 import { ref } from "vue";
 import FloatingHearts from "./components/FloatingHearts.vue";
@@ -64,32 +65,23 @@ const onSlideShowComplete = () => {
       >
         <div
           v-if="currentPhase === 'celebration'"
-          class="min-h-screen flex flex-col items-center justify-center py-12 px-4"
+          class="min-h-screen flex flex-col items-center justify-center py-4 md:py-8 px-4"
         >
           <!-- Confetti Effect -->
           <Confetti />
 
           <!-- Birthday Cake -->
-          <BirthdayCake />
+          <div class="mb-4 md:mb-6">
+            <BirthdayCake />
+          </div>
 
           <!-- Photo Frame -->
-          <PhotoFrame :photo-url="girlfriendPhoto" :name="girlfriendName" />
-
-          <!-- Special message -->
-          <div
-            class="mt-12 text-center max-w-lg px-4 animate-fade-in-up"
-            style="animation-delay: 3s"
-          >
-            <p class="text-lg md:text-xl text-pink-600 leading-relaxed">
-              Terima kasih sudah menjadi bagian terindah dalam hidupku. Setiap
-              hari bersamamu adalah anugerah bagiku. Aku mencintaimu lebih dari
-              yang bisa kuungkapkan dengan kata-kata.
-              <span class="text-2xl">💕</span>
-            </p>
+          <div class="md:mb-6">
+            <PhotoFrame :photo-url="girlfriendPhoto" :name="girlfriendName" />
           </div>
 
           <!-- Footer -->
-          <div class="mt-8 text-pink-400 text-sm">
+          <div class="mt-4 md:mt-6 text-pink-400 text-xs md:text-sm">
             Made with 💖 just for you
           </div>
         </div>
@@ -97,21 +89,23 @@ const onSlideShowComplete = () => {
     </div>
 
     <!-- Sparkle decorations -->
-    <div class="fixed top-10 left-10 text-3xl animate-sparkle">✨</div>
+    <div class="fixed top-10 left-10 text-2xl md:text-3xl animate-sparkle">
+      ✨
+    </div>
     <div
-      class="fixed top-20 right-20 text-2xl animate-sparkle"
+      class="fixed top-20 right-20 text-xl md:text-2xl animate-sparkle"
       style="animation-delay: 0.5s"
     >
       ✨
     </div>
     <div
-      class="fixed bottom-20 left-20 text-2xl animate-sparkle"
+      class="fixed bottom-20 left-20 text-xl md:text-2xl animate-sparkle"
       style="animation-delay: 1s"
     >
       ✨
     </div>
     <div
-      class="fixed bottom-10 right-10 text-3xl animate-sparkle"
+      class="fixed bottom-10 right-10 text-2xl md:text-3xl animate-sparkle"
       style="animation-delay: 1.5s"
     >
       ✨
