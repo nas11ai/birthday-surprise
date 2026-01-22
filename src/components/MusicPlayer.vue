@@ -82,8 +82,9 @@ onMounted(() => {
     preload="auto"
   >
     <!-- Default: Happy Birthday instrumental - replace with your own music file -->
-    <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+    <!-- <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg"> -->
     <!-- Add your own music file in public folder and use: -->
     <!-- <source src="/your-music.mp3" type="audio/mpeg"> -->
+    <source src="/public/Sekou - Catching Bodies.mp3" type="audio/mpeg">
   </audio>
 </template>
